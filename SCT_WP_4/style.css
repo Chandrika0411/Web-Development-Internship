@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:650px;
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+h1{
+    text-align:center;
+    color:#5b2c87;
+    margin-bottom:20px;
+}
+
+.input-box{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+#taskInput{
+    width:100%;
+}
+
+input{
+    padding:12px;
+    border:2px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+    outline:none;
+}
+
+#dateInput,
+#timeInput{
+    flex:1;
+}
+
+#addBtn{
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#ff5fa2;
+    color:white;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#addBtn:hover{
+    background:#ff2f82;
+}
+
+ul{
+    list-style:none;
+    margin-top:20px;
+}
+
+li{
+    background:#f2ecff;
+    padding:15px;
+    margin-bottom:12px;
+    border-radius:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.taskInfo{
+    flex:1;
+}
+
+.taskTitle{
+    font-weight:bold;
+    font-size:17px;
+}
+
+.taskDate{
+    font-size:13px;
+    color:#555;
+    margin-top:5px;
+}
+
+.completed .taskTitle{
+    text-decoration:line-through;
+    color:gray;
+}
+
+.actions button{
+    margin-left:5px;
+    padding:8px 12px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    color:white;
+}
+
+.done{
+    background:#4CAF50;
+}
+
+.edit{
+    background:#2196F3;
+}
+
+.delete{
+    background:#f44336;
+}
+
+#emptyMsg{
+    text-align:center;
+    margin-top:20px;
+    color:gray;
+}
