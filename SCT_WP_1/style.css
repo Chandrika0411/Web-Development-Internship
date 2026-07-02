@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0f0d0e;
+  color: #fff7ef;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header / Navbar */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 22px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(15, 13, 14, 0.75);
+  backdrop-filter: blur(14px);
+  z-index: 1000;
+  transition: all 0.4s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Navbar after scrolling */
+header.scrolled {
+  background: linear-gradient(90deg, #3b141c, #7a2e3a);
+  padding: 14px 8%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #ffd6a5;
+  font-family: "Playfair Display", serif;
+}
+
+nav a {
+  color: #fff7ef;
+  text-decoration: none;
+  font-size: 13px;
+  margin-left: 28px;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Menu hover effect */
+nav a:hover {
+  background: #ffd6a5;
+  color: #3b141c;
+  box-shadow: 0 0 15px rgba(255, 214, 165, 0.5);
+}
+
+/* Common section style */
+.section {
+  min-height: 100vh;
+  padding: 135px 13%;
+}
+
+/* Background color combinations */
+.hero {
+  background: linear-gradient(135deg, #1b0f13, #3b141c, #7a2e3a);
+}
+
+.about {
+  background: linear-gradient(135deg, #101820, #1f3a3d, #395b64);
+}
+
+.work {
+  background: linear-gradient(135deg, #2b160f, #6b3e26, #b86b45);
+}
+
+.contact {
+  background: linear-gradient(135deg, #120f1c, #33294f, #6d5dfc);
+}
+
+.small-text {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #ffd6a5;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+h1, h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  color: #fff7ef;
+}
+
+.desc {
+  max-width: 540px;
+  font-size: 18px;
+  color: #f3ded0;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+button {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  background: #ffd6a5;
+  color: #3b141c;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+button:hover {
+  background: #fff7ef;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(255, 214, 165, 0.4);
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 25px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 310px;
+  padding: 30px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.11);
+  backdrop-filter: blur(14px);
+  transition: 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.19);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.card h3 {
+  color: #ffd6a5;
+  margin-bottom: 18px;
+  font-size: 24px;
+}
+
+.card h4 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.card p {
+  color: #f3ded0;
+  line-height: 1.6;
+}
+
+/* Collection list */
+.list {
+  max-width: 780px;
+  margin-top: 30px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 22px;
+  margin-bottom: 18px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.12);
+  transition: 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.item:hover {
+  background: rgba(255,255,255,0.22);
+  transform: translateX(10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.item span {
+  font-size: 28px;
+}
+
+.item h4 {
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.item p {
+  color: #f5dfd1;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    padding: 18px 6%;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  header.scrolled {
+    padding: 14px 6%;
+  }
+
+  nav a {
+    margin-left: 5px;
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+
+  .section {
+    padding: 145px 8%;
+  }
+
+  h1, h2 {
+    font-size: 40px;
+  }
+
+  .desc {
+    font-size: 16px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .item {
+    align-items: flex-start;
+  }
+}
