@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #5f2c82, #49a09d, #ff6a00);
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.calculator {
+  width: 360px;
+  padding: 25px;
+  border-radius: 25px;
+  background: #1c1f38;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+h1 {
+  text-align: center;
+  color: #00ffd5;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+#display {
+  width: 100%;
+  height: 75px;
+  border: none;
+  outline: none;
+  border-radius: 18px;
+  background: #111827;
+  color: #00ffd5;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: right;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+#display::placeholder {
+  color: #00ffd5;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 13px;
+}
+
+button {
+  height: 60px;
+  border: none;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ffffff;
+  color: #1c1f38;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #00ffd5;
+  color: #111827;
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Remove focus highlight after clicking */
+button:focus {
+    outline: none;
+    background: #ffffff;
+    color: #1c1f38;
+}
+
+/* Show color only while the button is actually being pressed */
+button:active {
+    transform: scale(0.95);
+    background: #00ffd5;
+    color: #111827;
+}
+
+.operator {
+  background: #6c63ff;
+  color: white;
+}
+
+.operator:hover {
+  background: #4b44d4;
+  color: white;
+}
+
+.equal {
+  background: #00c853;
+  color: white;
+}
+
+.equal:hover {
+  background: #00a844;
+  color: white;
+}
+
+.clear {
+  background: #ff1744;
+  color: white;
+}
+
+.clear:hover {
+  background: #d5002f;
+  color: white;
+}
+
+.backspace {
+  background: #ff9100;
+  color: white;
+}
+
+.backspace:hover {
+  background: #ff6d00;
+  color: white;
+}
+
+@media (max-width: 430px) {
+  .calculator {
+    width: 90%;
+    padding: 20px;
+  }
+
+  button {
+    height: 55px;
+    font-size: 18px;
+  }
+
+  #display {
+    font-size: 26px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+}
